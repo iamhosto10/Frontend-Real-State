@@ -12,6 +12,7 @@ import {
   User,
   DollarSign,
 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -22,24 +23,17 @@ interface ITraceForm {
   tax: string;
 }
 
-interface IClientpageProps {
-  id: string;
-  idProperty: string | null;
-  name: string | null;
-  dateSale: string | null;
-  value: string | null;
-  tax: string | null;
-}
-
-const Clientpage = ({
-  id,
-  dateSale,
-  idProperty,
-  name,
-  tax,
-  value,
-}: IClientpageProps) => {
+const Clientpage = () => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const searchParams = useSearchParams();
+
+  const id = searchParams.get("id") || "";
+  const idProperty = searchParams.get("idProperty");
+  const name = searchParams.get("name");
+  const dateSale = searchParams.get("dateSale");
+  const value = searchParams.get("value");
+  const tax = searchParams.get("tax");
+
   const router = useRouter();
 
   const [loading, setLoading] = useState(false);

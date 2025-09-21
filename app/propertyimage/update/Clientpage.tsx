@@ -12,16 +12,16 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
-interface IClientpageProps {
-  id: string;
-  file: string | null;
-  idProperty: string | null;
-  enabled: boolean;
-}
-
-const Clientpage = ({ id, file, idProperty, enabled }: IClientpageProps) => {
+const Clientpage = () => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id") || "";
+  const idProperty = searchParams.get("idProperty");
+  const file = searchParams.get("file");
+  const enabled = searchParams.get("enabled") === "true";
 
   const router = useRouter();
   const [loading, setLoading] = useState(false);
