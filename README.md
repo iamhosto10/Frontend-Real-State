@@ -66,3 +66,25 @@ La forma más sencilla de desplegar tu aplicación Next.js es utilizando la [**P
 
 Consulta la [documentación de despliegue de Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para más detalles.
 
+
+## 🧪 Testing
+
+Este proyecto usa **Jest** + **React Testing Library**.
+
+### Notas importantes
+- Se configuró **Babel** para que Jest entienda JSX y TypeScript:
+  ```bash
+  npm install -D babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
+  ```
+- Algunos componentes (`Button`, `Card`, `Carousel`, `next/link`) fueron **mockeados** para evitar errores en tests.
+- El prop `asChild` genera warnings en Jest, por eso se creó un mock personalizado para `Button`.
+- Los precios se renderizan con salto de línea y separador de miles, por lo que se usa una regex flexible en las pruebas:
+  ```ts
+  expect(screen.getByText(/\$\s*500[.,]000/)).toBeInTheDocument();
+  ```
+
+👉 Ejecutar tests:
+```bash
+npm run test
+```
+
