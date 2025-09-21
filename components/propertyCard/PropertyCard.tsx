@@ -27,7 +27,6 @@ const PropertyCard = ({ property }: IPropertyCardProps) => {
   return (
     <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-white/90 backdrop-blur-sm border-2 hover:border-blue-300/50 overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-6 p-6">
-        {/* Image Carousel */}
         <div className="w-full lg:w-1/2">
           {property.propertyImages && property.propertyImages.length > 0 ? (
             <Carousel className="w-full">
@@ -62,9 +61,7 @@ const PropertyCard = ({ property }: IPropertyCardProps) => {
           )}
         </div>
 
-        {/* Property Information */}
         <div className="flex-1 space-y-4">
-          {/* Title and Owner */}
           <div className="space-y-3">
             <h2 className="font-bold text-2xl lg:text-3xl text-primary group-hover:text-blue-600 transition-colors">
               {property.name}
@@ -84,7 +81,6 @@ const PropertyCard = ({ property }: IPropertyCardProps) => {
             )}
           </div>
 
-          {/* Property Details */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex items-start gap-3">
               <div className="p-2 bg-red-100 rounded-full mt-0.5">
@@ -135,7 +131,6 @@ const PropertyCard = ({ property }: IPropertyCardProps) => {
             </div>
           </div>
 
-          {/* Action Button */}
           <div className="pt-4 border-t border-gray-100">
             <Button
               asChild
