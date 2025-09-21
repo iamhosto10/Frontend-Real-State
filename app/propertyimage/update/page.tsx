@@ -1,7 +1,12 @@
 import Clientpage from "./Clientpage";
+import { Suspense } from "react";
 
 const Page = async () => {
-  return <Clientpage />;
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <Clientpage />
+    </Suspense>
+  );
 };
 
 export default Page;
