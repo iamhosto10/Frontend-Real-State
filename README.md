@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Real-State
 
-## Getting Started
+Este proyecto es una prueba técnica desarrollada para **Million**, que consiste en la creación de una aplicación frontend utilizando **Next.js** para una plataforma inmobiliaria.
 
-First, run the development server:
+## 🚀 Descripción
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Frontend Real-State es una aplicación web moderna construida con [Next.js](https://nextjs.org), un framework de React que permite desarrollar aplicaciones rápidas y eficientes. El proyecto está diseñado para servir como la interfaz de usuario de una plataforma de bienes raíces, implementando las mejores prácticas de desarrollo y utilizando tecnologías de vanguardia para garantizar un rendimiento óptimo y una experiencia de usuario fluida.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto fue inicializado con `create-next-app` y está configurado para utilizar `next/font` con el fin de optimizar la carga de la tipografía [Geist](https://vercel.com/font), la nueva familia de fuentes de Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Estructura del Repositorio
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El repositorio está organizado de la siguiente manera:
 
-## Learn More
+-   **/app**: Contiene las páginas y rutas principales de la aplicación.
+-   **/components**: Almacena componentes de interfaz de usuario reutilizables.
+-   **/lib**: Incluye módulos y funciones de utilidad.
+-   **/public**: Contiene archivos estáticos como imágenes y otros recursos.
+-   **.gitignore**: Especifica los archivos y directorios a ser ignorados por Git.
+-   **next.config.ts**: Archivo de configuración para Next.js.
+-   **package.json**: Define los metadatos del proyecto y sus dependencias.
+-   **pnpm-lock.yaml**: Archivo de bloqueo de dependencias para pnpm.
+-   **postcss.config.mjs**: Configuración para PostCSS.
+-   **tailwind.config.js**: Configuración de Tailwind CSS.
+-   **tsconfig.json**: Configuración del compilador de TypeScript.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Cómo Empezar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/iamhosto10/Frontend-Real-State.git](https://github.com/iamhosto10/Frontend-Real-State.git)
+    ```
+2.  **Instala las dependencias** (puedes usar tu gestor de paquetes preferido):
+    ```bash
+    npm install
+    # o
+    yarn install
+    # o
+    pnpm install
+    ```
+3.  **Inicia el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    # o
+    yarn dev
+    # o
+    pnpm dev
+    ```
+4.  Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación en funcionamiento.
+5.  Se recomienda crear una api que tenga los datos descritos se recomienda tener una env para probarlo de esta manera NEXT_PUBLIC_API_URL
+6.  Se recomienda hacer combinacion con con el siguiente proyecto que esta relacionado [https://github.com/iamhosto10/Backend-Real-State](https://github.com/iamhosto10/Backend-Real-State), es una API que contiene todo lo que necesitas
 
-## Deploy on Vercel
+Puedes empezar a editar la página principal modificando el archivo `app/page.tsx`. La aplicación se recargará automáticamente a medida que guardes los cambios.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💻 Tecnologías Utilizadas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   **TypeScript**: 97.1%
+-   **CSS**: 2.8%
+-   **JavaScript**: 0.1%
+
+## ☁️ Despliegue
+
+La forma más sencilla de desplegar tu aplicación Next.js es utilizando la [**Plataforma Vercel**](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), de los creadores de Next.js.
+
+Consulta la [documentación de despliegue de Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para más detalles.
+
